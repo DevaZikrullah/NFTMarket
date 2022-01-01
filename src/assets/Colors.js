@@ -1,6 +1,6 @@
 //use the following file to define your colors across the project
 const Colors = {
-  Primary: "#FF4B69",
-  Secondary: "#1D3557",
+  Primary: "#FF5959",
+  Secondary: "#FFF8F3",
 };
 export default Colors;

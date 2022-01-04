@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Colors from "../Colors";
 import SearchBar from "./styled/SearchBar.styled";
-import Tabs from "./styled/Tabs.stylwd";
+import Tabs from "./styled/Tabs.styled";
 
 const HomePageE1 = styled.div `
     background-color:${Colors.Background};

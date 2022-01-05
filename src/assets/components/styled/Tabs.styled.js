@@ -2,13 +2,6 @@ import { useState } from "react";
 import styled from "styled-components";
 import Colors from "../../Colors";
 
-const i = [
-    {id:1,title:'Featured',Content:<div>Tab1</div>},
-    {id:2,title:'Collection',Content:<div>Tab2</div>},
-    {id:3,title:'Arist',Content:<div>Tab3</div>},
-    {id:4,title:'Tag',Content:<div>Tab4</div>},
-
-];
 
 const TabsE1=styled.div`
     width: 100%;
@@ -47,18 +40,23 @@ const TitelsContainer=styled.span`
     padding: 0 1rem;
 `;
 
-export default function Tabs() {
+export default function Tabs(tabs) {
 
-    const [CurrentTab, SetCurrentTab] = useState(i[0]);
+    const [CurrentTab, SetCurrentTab] = useState(tabs[0]);
 
     return (
         <TabsE1>
             <TitelsContainer>
-                {i.map(tabs=>{
-                    return <Title active = {CurrentTab.id===tabs.id}>{tabs.title}</Title>;
+                {tabs.map(tab=>{
+                    return <Title onClick={()=>{
+                        if (CurrentTab.id!==tab.id) {
+                            SetCurrentTab(tab);
+                        }
+                    }
+                } active = {CurrentTab.id===tab.id}>{tab.title}</Title>;
                 })}
             </TitelsContainer>
-            <Content>Content</Content>
+            <Content>{CurrentTab.content}</Content>
         </TabsE1>
     );
 }

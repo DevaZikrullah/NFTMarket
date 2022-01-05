@@ -3,6 +3,14 @@ import Colors from "../Colors";
 import SearchBar from "./styled/SearchBar.styled";
 import Tabs from "./styled/Tabs.styled";
 
+const tabs = [
+    {id:1,title:'Featured',content:<div>Tab1</div>},
+    {id:2,title:'Collection',content:<div>Tab2</div>},
+    {id:3,title:'Arist',content:<div>Tab3</div>},
+    {id:4,title:'Tag',content:<div>Tab4</div>},
+
+];
+
 const HomePageE1 = styled.div `
     background-color:${Colors.Background};
     flex: 1;
@@ -30,7 +38,7 @@ export default function HomePage() {
         <HomePageE1 >
             <Title > NFT Market </Title>
             <SearchBar /> 
-            <Tabs />
+            <Tabs tabs={tabs}/>
         </HomePageE1>
     );
 }

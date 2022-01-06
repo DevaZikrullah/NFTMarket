@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import Colors from "../Colors";
+import FeaturedTab from "./featuredTab";
 import SearchBar from "./styled/SearchBar.styled";
 import Tabs from "./styled/Tabs.styled";
 
 const tabs = [
-    {id:1,title:'Featured',content:<div>Tab1</div>},
+    {id:1,title:'Featured',content: <FeaturedTab />},
     {id:2,title:'Collection',content:<div>Tab2</div>},
     {id:3,title:'Arist',content:<div>Tab3</div>},
     {id:4,title:'Tag',content:<div>Tab4</div>},
